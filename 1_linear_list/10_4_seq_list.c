@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define Max_size 10
+#define Max_size 100
 #define true 1
 #define false 0
 typedef struct SqList{
@@ -18,6 +18,14 @@ void InitList(Sq *L)
 	L->length=0;
 }
 
+int Empty(Sq L){
+	if(L.length == 0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
 int Length(Sq L){
 	return L.length;
 }
@@ -28,7 +36,7 @@ void Add_Elem(Sq *L, int value){
 		L->length += 1;
 	}
 	else{
-		printf("error array size");
+		printf("error array size\n");
 	}
 }
 int LocateElem(Sq L, int value){
@@ -75,23 +83,23 @@ void ListInsert(Sq *L, int id, int value){
 	}
 }
 
-int main(){
-	Sq sqlist;
-	InitList(&sqlist);
-	
-	for(int i=0;i<5;i++){
-		Add_Elem(&sqlist, i);
-	}
-
-	ListInsert(&sqlist, 2, 10);
-	for(int i=0;i<sqlist.length;i++){
-		printf("%d\n",sqlist.data[i]);
-	}
-	/* int length = Length(&sqlist); */
-	/* int Elem = GetElem(sqlist, 3); */
-	/* int Index = GetIndex(sqlist, 10); */
-	/* printf("Length is %d\n", length); */
-	/* printf("3 Elem is %d,10 Index is %d\n", Elem, Index); */
-	/* printf("%d\n", sqlist.length); */
-	return 0;
-}
+/* int main(){ */
+/* 	Sq sqlist; */
+/* 	InitList(&sqlist); */
+/* 	 */
+/* 	for(int i=0;i<5;i++){ */
+/* 		Add_Elem(&sqlist, i); */
+/* 	} */
+/*  */
+/* 	ListInsert(&sqlist, 2, 10); */
+/* 	for(int i=0;i<sqlist.length;i++){ */
+/* 		printf("%d\n",sqlist.data[i]); */
+/* 	} */
+/* 	#<{(| int length = Length(&sqlist); |)}># */
+/* 	#<{(| int Elem = GetElem(sqlist, 3); |)}># */
+/* 	#<{(| int Index = GetIndex(sqlist, 10); |)}># */
+/* 	#<{(| printf("Length is %d\n", length); |)}># */
+/* 	#<{(| printf("3 Elem is %d,10 Index is %d\n", Elem, Index); |)}># */
+/* 	#<{(| printf("%d\n", sqlist.length); |)}># */
+/* 	return 0; */
+/* } */
