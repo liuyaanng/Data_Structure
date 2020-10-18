@@ -151,7 +151,7 @@ int main(int argc, char** argv) {
     printf("████████ CreateList_Head \n");
     {
         LinkList L;
-        CreateList_Head(&L, 5, "TestData_Head.txt");
+        CreateList_Head(&L, 6, "TestData_Head.txt");
         printf("█ 头插法建立单链表 L = ");
         ListTraverse(L, PrintElem);
     }
@@ -161,7 +161,7 @@ int main(int argc, char** argv) {
     printf("████████ CreateList_Tail \n");
     {
         LinkList L;
-        CreateList_Tail(&L, 5, "TestData_Tail.txt");
+        CreateList_Tail(&L, 8, "TestData_Tail.txt");
         printf("█ 尾插法建立单链表 L = ");
         ListTraverse(L, PrintElem);
     }
