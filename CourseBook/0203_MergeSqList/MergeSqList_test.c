@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "SqList.h"
-#include "MergeList.h"                //**▲02 线性表**//
+#include "MergeSqList.h"                //**▲02 线性表**//
 
 // 测试函数，打印元素
 void PrintElem(ElemType e) {

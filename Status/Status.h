@@ -36,6 +36,11 @@ typedef int Boolean;
 
 extern Boolean debug;
 
+/* read data form files
+ * notes: 1. All string are simple text, such as %d%s%c,but not %2d...
+ *
+ */
+int ReadData(FILE * fp, char * format, ...);
 /* press enter to continue
  * if debug=TRUE, code will stop until press enter
  */
